@@ -29,7 +29,7 @@ ul li + li {
 }
 
 .wrap {
-  max-width: 850px;
+  max-width: 950px;
 }
 
 .header {
@@ -68,4 +68,45 @@ ul li + li {
   font-size: 0.9em;
   font-weight: 400;
   color: #e71d36ad;
+}
+
+.items {
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
+
+.items .item {
+  display: flex;
+  gap: 30px;
+}
+
+.items .item h3 {
+  margin-top: 0px;
+}
+
+.items .item .preview img {
+  border: 6px solid #c9cad9;
+}
+
+.items .item .title {
+  margin-top: 0px;
+}
+
+.items .item .title h3 a {
+  color: #e71d36 !important;
+}
+
+.items .item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.items .item .read-more {
+  margin-top: 15px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e71d36;
+}
+
+.items .item + .item {
+  margin-top: 50px;
 }
