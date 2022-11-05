@@ -77,7 +77,13 @@ ul li + li {
 
 .items .item {
   display: flex;
+  justify-content: space-between;
   gap: 30px;
+}
+
+.items .item + .item {
+  padding-top: 20px;
+  border-top: 1px dotted #c9cad92e;
 }
 
 .items .item h3 {
@@ -108,5 +114,30 @@ ul li + li {
 }
 
 .items .item + .item {
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+.read-more:hover {
+  background-color: #80000033;
+}
+
+a:hover {
+  color: #ff0000;
+}
+
+.items-other {
+  displaY: flex;
+  gap: 20px;
+}
+
+.items-other .other {
+  background-color: #00000047;
+  padding: 15px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  border: 2px solid #c9cad98f;
+}
+
+.items-other .other h3 {
+  margin-top: 0px;
 }
