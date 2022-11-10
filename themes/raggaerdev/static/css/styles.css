@@ -160,6 +160,16 @@ a:hover {
   height: 24px;
 }
 
+.wrap img {
+  max-width: 100%;
+}
+
+.header-img {
+  margin-bottom: 20px;
+  border: 1px solid #c9cad9;
+  box-sizing: border-box;
+}
+
 @media only screen and (max-width: 768px) {
   .preview img {
     width: 250px;
