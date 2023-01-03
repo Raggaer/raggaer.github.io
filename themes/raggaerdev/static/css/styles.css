@@ -3,6 +3,19 @@ body {
   background-color: #2d2d37;
   color: #dadada;
   font-family: Montserrat, Lato, sans-serif;
+  background-image: url("../img/waves.svg");
+  background-size: cover;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 42px;
 }
 
 p {
@@ -170,6 +183,34 @@ a:hover {
   box-sizing: border-box;
 }
 
+.projects {
+  margin-bottom: 30px;
+}
+
+.project + .project {
+  margin-top: 10px;
+}
+
+.project h2 {
+  padding: 5px;
+  background-color: #1e1e22fa;
+  border: 1px solid #cccccc26;
+  color: #e71d36;
+}
+
+.project .tags {
+  display: flex;
+  gap: 7px;
+}
+
+.project .tags span {
+  cursor: pointer;
+  padding: 3px;
+  background-color: #ffff82cf;
+  color: black;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 768px) {
   .preview img {
     width: 250px;
@@ -181,7 +222,19 @@ a:hover {
     flex-direction: row !important;
   }
 
+  .tags {
+    flex-wrap: wrap;
+  }
+
   .preview {
+    display: none;
+  }
+
+  .profile {
+    justify-content: center;
+  }
+
+  .profile img {
     display: none;
   }
 
