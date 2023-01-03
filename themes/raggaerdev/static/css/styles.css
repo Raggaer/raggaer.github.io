@@ -5,6 +5,16 @@ body {
   font-family: Montserrat, Lato, sans-serif;
   background-image: url("../img/waves.svg");
   background-size: cover;
+  overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #50505054;
 }
 
 .profile {
