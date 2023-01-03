@@ -1,0 +1,16 @@
+<html><head><title>raggaer.dev</title><link rel=stylesheet href=/css/styles.css><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=/img/favicon.ico></head><body><div class=container><div class=wrap><div class=header><h1>Álvaro Carvajal Castro</h1><div class=info><h2><a href=/>Home</a> / RavenQuest</h2><h3 id=info-links><a href=https://linkedin.com/in/raggaer rel=noopener target=_blank><img src=/img/linkedin.png alt=LinkedIn></a>
+<a href=https://github.com/Raggaer rel=noopener target=_blank><img src=/img/github.png alt=GitHub></a>
+<a href=https://www.codingame.com/profile/bd2a6ee82b18e52b5d3840e9fc13f7bf7677101 rel=noopener target=_blank><img src=/img/codingame.png alt=CodinGame></a>
+<a href=mailto:mail@raggaer.dev>mail@raggaer.dev</a></h3></div></div><img class=header-img src=/img/ravenquest-header.png alt=RavenQuest><h2 class=title-section><span class=number>01.</span>
+RavenQuest</h2><p><a href=https://whitepaper.ravenquest.io/the-game/ravenquest rel=noopener target=_blank>RavenQuest Whitepaper</a>.</p><p>Backend made using <b>Go</b>. Website made using server-side rendering. Since RavenQuest is a Play2Earn blockchain game,
+the backend needs to integrate some blockchain elements in it:</p><ul><li>Multiple smart-contract using abigen bindings integration.</li><li>NFT minting on-demand.</li><li>Link between user-created accounts and their wallets, signing a message and verifying the ownership of the given address.</li><li>Integrations with some AWS systems such as SNS, SES and S3.</li></ul><h2 class=title-section style=margin-top:60px><span class=number>02.</span>
+Land_Sale</h2><p>The land sale is just a land ownsership sale, where users can buy an "ownership" spot on the game.
+A smart-contract was used for the sale, where users would pay with any ERC20 token and the contract will end emitting certain event,
+where the backend will then gather the event and insert specific information into the database.</p><p>Reading events is basically done with <b>eth_getLogs</b> and some specific filters (like block range for example).
+The thread runs on a ticker and periodically checks for new events that have not been processed before.</p><p>Since the sale was done on <b>Polygon</b>, blocks are not final,
+we can expect a fork, to ensure some security the thread only works with blocks that are atleast 22 blocks deep on the chain.
+Since Polygon PoS average block time is around 2 seconds this is not a big deal.</p><h2 class=title-section style=margin-top:60px><span class=number>03.</span>
+NFTs</h2><p>Users can interact with a multitude of NFTs inside the game.
+Minting is done a separated thread, where this thread will be pooling the database for new minting requests,
+then thanks to abigen a new token is issued if needed.</p><p>Since there are more operations (withdraw, deposit in-game) not always a new token will be issued.
+The contract contains a "isAvailable" field to prevent interactions with the token while its being used in-game.</p><p>All the meta-data is off-chain, server from the backend directly from the database after aplying some transformations on it.</p></div></div></body></html>
