@@ -58,7 +58,7 @@ ul li + li {
 
 .header {
   border-bottom: 3px solid #e71d36;
-  margin-bottom: 25px
+  margin-bottom: 25px;
 }
 
 .header h1 {
@@ -114,6 +114,10 @@ ul li + li {
   margin-top: 0px;
 }
 
+.items .item .content {
+  flex: 1;
+}
+
 .items .item .preview img {
   border: 6px solid #c9cad9;
 }
@@ -150,7 +154,7 @@ a:hover {
 }
 
 .items-other {
-  displaY: flex;
+  display: flex;
   gap: 20px;
 }
 
