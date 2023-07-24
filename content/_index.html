@@ -141,12 +141,12 @@ draft: false
       </div>
       <div class="description">
         <p>
-          SaaS Remote team synchronization tool. Allows you to create teams and track their local timezones:
+          SaaS Remote team synchronization tool. Timezone IANA database parsing, including:
         </p>
         <ul>
           <li>Stripe integration for payments with recurring subscriptions.</li>
           <li>Time manipulation using the IANA timezone database. Parsing and updating.</li>
-          <li>Shapefile parsing for timezone lookup based on coordinates.</li>
+          <li>Shapefile parsing for timezone lookup based on coordinates (lat, long).</li>
           <li>Go lambda functions for IANA timezone build and lookup.</li>
         </ul>
       </div>
@@ -195,9 +195,9 @@ draft: false
         <p>MMORPG. Full website backend integration made in Go, including:</p>
         <ul>
           <li>Payments gateway including PayPal and Coinbase.</li>
-          <li>Working Twitch drops API.</li>
+          <li>Working Twitch API including handling Drops Campaigns for more than 45.000 users.</li>
           <li>
-            Achieved high request throughput using Go and Redis as a cache.
+            Achieved high request throughput using Go and Redis as a cache. More than 1.000.000 requests per day.
           </li>
         </ul>
       </div>
