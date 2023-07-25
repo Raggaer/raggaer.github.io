@@ -116,16 +116,13 @@ draft: false
 
 <h2 class="title-section" style="margin-top: 60px">
   <span class="number">02.</span>
-  Showcase
+  Projects
 </h2>
 
 <p>
-  Below is a list of some of my public projects. You can find all of my public work on
-  <a href="https://github.com/Raggaer" target="_blank">my Github Profile</a>.
-</p>
-
-<p>
-  <a href="/projects"> View all of my working experience. </a>
+  Below is a list of some of my public facing projects. You can find all of my public work on
+  <a href="https://github.com/Raggaer" target="_blank">my Github profile</a>.
+  Keep in mind that some of my work is private and not available on Github.
 </p>
 
 <div class="items">
@@ -136,19 +133,19 @@ draft: false
     <div class="content">
       <div class="title">
         <h3>
-          <a href="https://ttime.app">TeamTime</a>
+          <a href="https://ttime.app">ttime.app</a>
         </h3>
       </div>
       <div class="description">
         <p>
-          SaaS Remote team synchronization tool. Timezone IANA database parsing, including:
+          SaaS Remote team synchronization tool. Timezone IANA database parsing,
+          timezone synchronization for more than 339 timezones, timezone shapefile parsing
+          for coordinates lookup in real-time.
         </p>
-        <ul>
-          <li>Stripe integration for payments with recurring subscriptions.</li>
-          <li>Time manipulation using the IANA timezone database. Parsing and updating.</li>
-          <li>Shapefile parsing for timezone lookup based on coordinates (lat, long).</li>
-          <li>Go lambda functions for IANA timezone build and lookup.</li>
-        </ul>
+
+        <p>
+          Backend made in PHP using Laravel, timezone parser made in Go, deployed on AWS Beanstalk.
+        </p>
       </div>
     </div>
   </div>
@@ -165,18 +162,16 @@ draft: false
       </div>
       <div class="description">
         <p>
-          P2E MMORPG. Full website backend integration made in Go, including:
-        </p>
-        <ul>
-          <li>Minting and token withdraw systems for ERC20 and ERC721 tokens.</li>
-          <li>
-            Full EVM compatible blockchain integration (minting assets, tokens,
-            Faucet).
-          </li>
-          <li>NFT centralized meta-data serving (hosted tokenURI data).</li>
-        </ul>
+          Leading Blockchain development team. Focused on Ethereum and EVM compatible chains with a Go backend.
+          Made smart contracts for land sales, NFTs, ERC20 tokens, handled more than
+          300.000 USD in transactions.
 
-        <a href="/projects/ravenquest" class="read-more">Read More</a>
+          <a href="/projects/ravenquest">Read more.</a>
+        </p>
+        <p>
+          Implemented custom NFT and token ownsership model allowing users to quickly transfer ownership of their
+          assets to between in-game and the blockchain.
+        </p>
       </div>
     </div>
   </div>
@@ -192,14 +187,13 @@ draft: false
         </h3>
       </div>
       <div class="description">
-        <p>MMORPG. Full website backend integration made in Go, including:</p>
-        <ul>
-          <li>Payments gateway including PayPal and Coinbase.</li>
-          <li>Working Twitch API including handling Drops Campaigns for more than 45.000 users.</li>
-          <li>
-            Achieved high request throughput using Go and Redis as a cache. More than 1.000.000 requests per day.
-          </li>
-        </ul>
+        <p>
+          Backend development and server management. Handling multiple public facing servers handling more than 1 million monthly requests.
+          Implemented Twitch API integration for streamers handling campaigns and drops with more than 45.000 viewers.
+        </p>
+        <p>
+          Achieved high email throughput using AWS SES and custom SMTP servers. Sending more than 50.000 emails per week.
+        </p>
       </div>
     </div>
   </div>
@@ -212,17 +206,18 @@ draft: false
       <div class="title">
         <h3>
           <a href="https://instacontainermodification.com"
-            >InstaContainerModification</a
+            >Insta Container Modification</a
           >
         </h3>
       </div>
       <div class="description">
-        <p>Full website front-end and backend. Including:</p>
-        <ul>
-          <li>Shopping cart system integrated with Stripe Checkout API.</li>
-          <li>UPS and DayAndRoss shipping API quote calculations on the fly.</li>
-          <li>Blog system integrated with AWS S3 and CloudFront.</li>
-        </ul>
+        <p>
+          Full website backend and frontend made in Go.
+          Stripe integration for payments, real-time shipping quotes using UPS and DayAndRoss APIs.
+        </p>
+        <p>
+          Implemented dealer locator using Google Maps API. Dealers portal for managing orders and quotes.
+        </p>
       </div>
     </div>
   </div>
@@ -238,12 +233,13 @@ draft: false
         </h3>
       </div>
       <div class="description">
-        <p>Full website backend. Including:</p>
-        <ul>
-          <li>Integration with AWS SES, SNS and S3 services.</li>
-          <li>Achieved high email throughput using Go and AWS SES with SNS.</li>
-          <li>Store purchases using PayPal, PagSeguro, Coinbase.</li>
-        </ul>
+        <p>
+          Full website backend and frontend made in Go.
+          Implemented custom CMS for managing news, pages, and store items.
+          Added multiple payment gateways for purchases, including Paypal, PIX, PagSeguro and Coinbase.
+        </p>
+        <p>
+          Backend handling more than 50.000 monthly users, reaching more than 1.000 concurrent users.
       </div>
     </div>
   </div>
