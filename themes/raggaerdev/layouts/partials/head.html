@@ -1,4 +1,7 @@
 <title>Raggaer - Backend Developer</title>
-<link rel="stylesheet" href="/css/styles.css" />
+
+{{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="/img/favicon.ico" />
+<link rel="shortcut icon" href="{{ (resources.Get "img/favicon.svg" | fingerprint).RelPermalink }}" />

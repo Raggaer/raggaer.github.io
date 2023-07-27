@@ -9,6 +9,10 @@ tags = []
 features = []
 min_version = "0.41.0"
 
+[module]
+  [module.assets]
+    fingerprints = true
+
 [author]
   name = "Raggaer"
   homepage = "https://raggaer.dev"

@@ -1,0 +1,7 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $class := .Get "class" }}
+
+{{ $img := resources.Get $src | fingerprint }}
+
+<img src="{{ $img.RelPermalink }}" alt="{{ $alt }}" class="{{ $class }}" />
