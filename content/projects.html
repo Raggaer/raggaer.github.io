@@ -5,9 +5,9 @@ draft: false
 ---
 
 <div class="header">
-  <h1>Álvaro Carvajal Castro</h1>
+  <h1 class="profile">Álvaro Carvajal Castro</h1>
   <div class="info">
-    <h2><a href="/">Home</a> / Projects</h2>
+    <h2><a href="/">Home</a> ~ Projects</h2>
     <h3 id="info-links">
       <a href="https://cv.raggaer.dev" rel="noopener" target="_blank">
         {{< img src="/img/cv.png" alt="Resume" >}}
@@ -18,7 +18,7 @@ draft: false
       <a href="https://github.com/Raggaer" rel="noopener" target="_blank">
         {{< img src="/img/github.png" alt="GitHub" >}}
       </a>
-      <a href="mailto:mail@raggaer.dev">mail@raggaer.dev</a>
+      <a class="b" href="mailto:mail@raggaer.dev">mail@raggaer.dev</a>
     </h3>
   </div>
 </div>
@@ -30,17 +30,25 @@ draft: false
         TeamTime
       </a>
     </h2>
+
+    <h3>Lead Developer</h3>
+
     <div class="tags">
-      <span>backend</span>
       <span>laravel</span>
       <span>go</span>
       <span>php</span>
+      <span>aws</span>
     </div>
 
     <p>
-      Saas application developed using Laravel and Go. Allows remote team local time synchronization and time tracking.
+      SaaS application developed using Laravel and Go. Allows remote team local time synchronization and time tracking.
       Using beanstalk, cloudfront and lambda for the backend.
     </p>
+
+    <p>
+      All timezone data is gathered from the IANA Time Zone Database, which is checked for updates daily.
+      Shapefile with all the timezones is added to the database allowing fast and accurate timezone lookups
+      based on latitude and longitude.
   </div>
 
   <div class="project">
@@ -49,11 +57,13 @@ draft: false
         RavenQuest
       </a>
     </h2>
+
+    <h3>Lead Blockchain Developer, Backend Developer</h3>
+
     <div class="tags">
-      <span>backend</span>
       <span>blockchain</span>
       <span>go</span>
-      <span>polygon</span>
+      <span>evm</span>
       <span>solidity</span>
     </div>
 
@@ -63,104 +73,134 @@ draft: false
     </p>
 
     <p>
-      <a href="/projects/ravenquest" class="read-more">Read More</a>
+      Worked on smart-contracts from the ground up, handling land sales, NFT assets for in-game items,
+      in-game and blockchain integrations.
+      Contracts managed over 300.000 USDC in sales in the first 24 hours.
+      <a href="/projects/ravenquest" class="read-more">Read more.</a>
+    </p>
+
+    <p>
+      Implemented custom secure chain abstraction layer for the backend,
+      allowing the use of encrypted accounts using keyring and HD wallets.
     </p>
   </div>
 
   <div class="project">
     <h2>
       <a href="https://ravendawn.online" rel="noopener" target="_blank">
-        Ravendawn
+        Ravendawn Online
       </a>
     </h2>
+
+    <h3>Backend Developer, DevOps</h3>
+
     <div class="tags">
-      <span>backend</span>
       <span>go</span>
-      <span>xenforo</span>
-      <span>paypal</span>
-      <span>coinbase</span>
+      <span>php</span>
+      <span>aws</span>
     </div>
 
     <p>
-      MMORPG Website backend developed using Go. Payment gateway featuring PayPal and Coinbase.
-      Fully integrated with a running instance of XenForo.
+      MMORPG. Developed multiple backend services for the game including: Website backend developed using Go
+      supporting multiple payment gateways (PayPal, Coinbase, Paylivre). Managed over 1.000.000 monthly requests.
     </p>
-  </div>
-
-  <div class="project">
-    <h2>
-      <a href="#">
-        Geth store layer
-      </a>
-    </h2>
-    <div class="tags">
-      <span>geth</span>
-      <span>go</span>
-      <span>keyring</span>
-      <span>keystore</span>
-    </div>
 
     <p>
-      Secure application layer for interacting with EVM compatible chains.
-      Leverages the system default keyring and go-ethererum keystore for transaction signers.
+      Worked on a small embeddings database for the in-game support bot, using OpenAI's GPT-3 to generate
+      responses to player questions, using context gathered from the distance between the input and any embedding.
+    </p>
+
+    <p>
+      Managed proper email delivery using AWS SES, with over 100.000 emails sent monthly.
+      Implemented DMARC, DKIM and SPF to ensure proper email delivery, including the use of SNS to handle bounces and complaints.
+    </p>
+
+    <p>
+      Setted up database multi-source replication for the main game server, enabling hot backups without impacting the game.
+      All backups are encrypted and stored on AWS S3.
     </p>
   </div>
 
   <div class="project">
     <h2>
       <a href="https://instacontainermodification.com" rel="noopener" target="_blank">
-        NICMA
+        Insta Container Modification
       </a>
     </h2>
+
+    <h3>Backend Developer</h3>
+
     <div class="tags">
-      <span>backend</span>
       <span>go</span>
-      <span>shipping</span>
-      <span>ups</span>
-      <span>day-and-ross</span>
-      <span>stripe</span>
+      <span>cms</span>
     </div>
 
     <p>
       Website backend developed using Go. Payment gateway using Stripe checkout.
-      Reseller panel. Integrated and made from scratch shopping cart system.
+      Reseller panel. Integrated and made from scratch a custom shopping cart system.
+    </p>
+
+    <p>
+      Added CMS like functionality to the website, allowing the modification of multiple content sections,
+      including: products, dealers, admin panel, etc.
+      Implemented real-time shipping rates using the UPS API and DayAndRoss API.
+    </p>
+
+    <p>
+      Uptime of 99.99% in the last 12 months. Managed over 10.000 monthly requests.
     </p>
   </div>
 
   <div class="project">
     <h2>
       <a href="https://legacy.archlightonline.com" rel="noopener" target="_blank">
-        ArchlightOnline
+        Archlight Online
       </a>
     </h2>
+
+    <h3>Backend Developer</h3>
+
     <div class="tags">
       <span>backend</span>
       <span>go</span>
-      <span>paypal</span>
-      <span>coinbase</span>
     </div>
 
     <p>
-      2D MMORPG Website backend developed using Go. Payment gateway featuring PayPal and Coinbase.
-      Multiple content mangement systems.
+      2D MMORPG. Website backend developed using Go. Implemented multiple payment gateways (PayPal, Coinbase, PagSeguro).
+      Multiple content mangement systems for the website, including: news, changelog, support, etc.
+    </p>
+
+    <p>
+      Implemented several AWS services, including: SES, S3, and SNS notifications for email bounces and complaints.
+      Worked on several micro-services, including: journal syslog real-time notifications into Discord webhooks.
     </p>
   </div>
 
   <div class="project">
     <h2>
       <a href="https://github.com/Raggaer/faceless-bytecode" rel="noopener" target="_blank">
-        Raw Bytecode NFT Collection 
+        Faceless Bytecode
       </a>
     </h2>
+
+    <h3>Personal Project</h3>
+
     <div class="tags">
       <span>blockchain</span>
       <span>solidity</span>
-      <span>bytecode</span>
+      <span>evm</span>
     </div>
 
     <p>
       Custom NFT Collection that uses raw bytecode smart-contracts
-      for storing SVG data directly on chain.
+      for storing SVG data directly on chain instead of using IPFS or storing the SVG data on the main contract itself.
+      Generating custom smart-contract bytecode in Go.
+    </p>
+
+    <p>
+      This implementation allows to save gas when deploying the collection contract since it does not carry any SVG data,
+      instead the data is deployed separately on a different contract, however this contract uses custom bytecode to
+      reduce any uneeeded data, saving gas on the deployment.
     </p>
   </div>
 
@@ -170,22 +210,31 @@ draft: false
         SimpleMixer
       </a>
     </h2>
+
+    <h3>Masters Thesis, Personal Project</h3>
+    
     <div class="tags">
       <span>blockchain</span>
       <span>solidity</span>
       <span>go</span>
-      <span>ecdsa</span>
+      <span>evm</span>
     </div>
 
     <p>
       Proof of Concept for a centralized Ethereum mixer.
-      Using ECDSA signatures generated by a central server for withdraw.
-      All signatures follow the EIP-712 schema.
+      Using ECDSA signatures generated by a central server used to validate withdraws.
+      All generated signatures follow the EIP-712 schema.
     </p>
 
     <p>
-      <a href="/projects/simple-mixer" class="read-more">Read More</a>
+      The mixer approach implements signature checking on the smart-contract side (using ecrecover to get the public key of the signature), allowing the user to withdraw
+      only when the signature was provided by the authorized server.
+      <a href="/projects/simple-mixer" class="read-more">Read more.</a>
     </p>
+
+    <p>
+      This project was done as a part of my Master's Thesis in Cybersecurity and Privacy.
+      More information on the thesis (Spanish) can be found <a href="https://openaccess.uoc.edu/handle/10609/147286" rel="noopener" target="_blank" class="read-more">here.</a>
   </div>
 
   <div class="project">
@@ -194,53 +243,23 @@ draft: false
         Castro AAC
       </a>
     </h2>
+
+    <h3>Personal Project</h3>
+
     <div class="tags">
       <span>go</span>
       <span>lua</span>
-      <span>vm</span>
-      <span>otserver</span>
     </div>
 
     <p>
-      Framework for creating websites for OpenTibia servers.
-      Allows the user to create custom controller logic by using lua virtual machines.
+      Simple CMS like Framework for creating websites for OpenTibia servers.
+      Allows the user to create custom controller logic by using Lua scripts.
+      Bringing the power of Lua to the web with the speed of Go.
     </p>
-  </div>
-
-  <div class="project">
-    <h2>
-      <a href="#">
-        systemd journal logs bot
-      </a>
-    </h2>
-    <div class="tags">
-      <span>systemd</span>
-      <span>journal</span>
-      <span>go</span>
-    </div>
 
     <p>
-      Discord bot that gathers data from running systemd services
-      and notifies certain channels when certain syslog identifiers are fired.
-      Retrieves data by using the journalctl command.
-    </p>
-  </div>
-
-  <div class="project">
-    <h2>
-      <a href="https://github.com/Raggaer/i3-renamer">
-        i3-renamer
-      </a>
-    </h2>
-    <div class="tags">
-      <span>go</span>
-      <span>i3</span>
-      <span>i3wm</span>
-    </div>
-
-    <p>
-      Simple i3wm workspace renamer based on the current tree content.
-      Using i3-ipc to write and read events.
+      The application starts a pool of Lua VMs that are used to execute the controller logic for each request that comes in.
+      A small standard library was created to allow the user to interact with the application, including: database access, session management, request handling, form manipulation, etc.
     </p>
   </div>
 
@@ -250,6 +269,9 @@ draft: false
         bison
       </a>
     </h2>
+
+    <h3>Personal Project</h3>
+
     <div class="tags">
       <span>lua</span>
       <span>vm</span>
@@ -258,25 +280,16 @@ draft: false
 
     <p>
       Proof-of-Concept website framework that allows to use Lua scripts to handle incoming HTTP requests.
-      Using gopher-lua to handle the Lua VM.
+      The framework uses a pool of Lua VMs to execute the controller logic for each request.
     </p>
-  </div>
-
-  <div class="project">
-    <h2>
-      <a href="https://github.com/Raggaer/respoe">
-        respoe
-      </a>
-    </h2>
-    <div class="tags">
-      <span>path-of-exile</span>
-      <span>api</span>
-      <span>go</span>
-    </div>
 
     <p>
-      Path of Exile API library for interacting with multiple parts of their website / services.
-      Able to login, change account information, post messages on the forum, fetch the ladder information.
+      The router is a simple .lua file that returns a table with the routes and their respective controller logic.
+    </p>
+
+    <p>
+      Much like Castro AAC, this framework allows the user to create custom controller logic by using Lua scripts.
+      However this framework is for general purpose websites, not only for OpenTibia servers.
     </p>
   </div>
 </div>
