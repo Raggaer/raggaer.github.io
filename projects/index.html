@@ -34,7 +34,15 @@ Worked on several micro-services, including: journal syslog real-time notificati
 for storing SVG data directly on chain instead of using IPFS or storing the SVG data on the main contract itself.
 Generating custom smart-contract bytecode in Go.</p><p>This implementation allows to save gas when deploying the collection contract since it does not carry any SVG data,
 instead the data is deployed separately on a different contract, however this contract uses custom bytecode to
-reduce any uneeeded data, saving gas on the deployment.</p></div><div class=project><h2><a href=https://github.com/Raggaer/SimpleMixer rel=noopener target=_blank>SimpleMixer</a></h2><h3>Masters Thesis, Personal Project</h3><div class=tags><span>blockchain</span>
+reduce any uneeeded data, saving gas on the deployment.</p></div><div class=project><h2><a href=https://github.com/Raggaer/create2-payment-gateway rel=noopener target=_blank>CREATE2 Payment Gateway</a></h2><h3>Personal Project</h3><div class=tags><span>blockchain</span>
+<span>solidity</span>
+<span>go</span>
+<span>evm</span></div><p>Proof of concept for a payment gateway using the CREATE2 opcode.
+The payment gateway allows the user to pay for a service using a smart-contract address that does not exist yet.
+When the user pays for the service, the payment gateway deploys the service contract using the CREATE2 opcode,
+the deployed contract address is deterministic and can be calculated before the contract is deployed.</p><p>The contract implements a drain like functionality, draining everything when deployed and any future payment to that address.
+This implementation allows to save gas since the contract is only deployed when the user pays for the service.
+Also it does not have to deal with any account or key management since the contract is deployed by the payment gateway.</p></div><div class=project><h2><a href=https://github.com/Raggaer/SimpleMixer rel=noopener target=_blank>SimpleMixer</a></h2><h3>Masters Thesis, Personal Project</h3><div class=tags><span>blockchain</span>
 <span>solidity</span>
 <span>go</span>
 <span>evm</span></div><p>Proof of Concept for a centralized Ethereum mixer.
