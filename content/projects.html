@@ -46,6 +46,11 @@ draft: false
     </p>
 
     <p>
+      More than 340 timezones are supported from parsing the zoneinfo database.
+      Accurate times are provided with their offset and daylight savings time.
+    </p>
+
+    <p>
       All timezone data is gathered from the IANA Time Zone Database, which is checked for updates daily.
       Shapefile with all the timezones is added to the database allowing fast and accurate timezone lookups
       based on latitude and longitude.
@@ -116,7 +121,7 @@ draft: false
     </p>
 
     <p>
-      Setted up database multi-source replication for the main game server, enabling hot backups without impacting the game.
+      Improved game state saving by setting up database multi-source replication for the main game server, enabling hot backups without impacting the game.
       All backups are encrypted and stored on AWS S3.
     </p>
   </div>
